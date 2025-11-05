@@ -1,15 +1,9 @@
 {:source-paths ["src"]
- :dependencies
- [[reagent "1.2.0"]
-  [org.clojure/clojurescript "1.11.132"]]
-
  :builds
  {:app
   {:target :browser
    :output-dir "public/js"
    :asset-path "js"
    :modules {:main {:init-fn my-app.core/init}}
-   :npm-deps {"react" "18.3.1"
-              "react-dom" "18.3.1"}
    :devtools {:http-root "docs"
               :http-port 8080}}}}

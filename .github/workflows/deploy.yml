@@ -39,9 +39,9 @@ jobs:
           node-version: 20
 
       - name: Install Clojure CLI
-        uses: DeLaGuardo/setup-clojure@v11
+        uses: DeLaGuardo/setup-clojure@master
         with:
-          cli: 1.11.3.1463
+          cli: latest
 
       - name: Install shadow-cljs
         run: npm install -g shadow-cljs

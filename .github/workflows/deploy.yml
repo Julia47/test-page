@@ -43,8 +43,8 @@ jobs:
         with:
           cli: latest
 
-      - name: Install shadow-cljs
-        run: npm install -g shadow-cljs
+      - name: Install npm
+        run: npm install
 
       - name: Build shadow-cljs project
         run: npx shadow-cljs release app

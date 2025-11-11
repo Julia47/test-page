@@ -38,11 +38,16 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install Clojure CLI
+        uses: DeLaGuardo/setup-clojure@v11
+        with:
+          cli: 1.11.3.1463
+
       - name: Install shadow-cljs
         run: npm install -g shadow-cljs
 
       - name: Build shadow-cljs project
-        run: shadow-cljs release app
+        run: npx shadow-cljs release app
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

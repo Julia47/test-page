@@ -1,17 +1,16 @@
-;; deps.edn
-{:paths ["src" "resources"]
-
+{:paths ["src"]
  :deps
- {org.clojure/clojure       {:mvn/version "1.11.3"}
-  org.clojure/clojurescript {:mvn/version "1.11.132"}
-  reagent/reagent {:mvn/version "2.0.1"}
-  cljsjs/react              {:mvn/version "18.3.1-0"}
-  cljsjs/react-dom          {:mvn/version "18.3.1-0"}}
+ {thheller/shadow-cljs      {:mvn/version "3.1.7"}
+  ;; org.clojure/clojure       {:mvn/version "1.11.3"}
+  org.clojure/clojurescript {:mvn/version "1.12.42"}
+  reagent/reagent           {:exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]
+                             :mvn/version "1.3.0"}}
 
  :aliases
  {:dev
   {:main-opts ["-m" "shadow.cljs.devtools.cli" "watch" "app"]}
-  
-  :release
-  {:main-opts ["-m" "shadow.cljs.devtools.cli" "release" "app"]}}}
+
+  ;; :release
+  ;; {:main-opts ["-m" "shadow.cljs.devtools.cli" "release" "app"]}
+  }}
 
